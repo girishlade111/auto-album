@@ -20,7 +20,10 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
     <div className="car-item flex-shrink-0 w-full max-w-xs md:max-w-sm bg-secondary/30 rounded-lg overflow-hidden shadow-lg">
       <div 
         className="h-52 md:h-64 bg-cover bg-center relative overflow-hidden"
-        style={{ backgroundImage: `url(${car.thumbnail})` }}
+        style={{ 
+          backgroundImage: `url(${car.thumbnail})`,
+          backgroundSize: 'cover'
+        }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90"></div>
       </div>

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getAllCars } from '@/data/cars';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -8,6 +8,12 @@ import CarCard from '@/components/CarCard';
 const Cars = () => {
   const allCars = getAllCars();
   const [searchTerm, setSearchTerm] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Force reloading of images
+    setIsLoaded(true);
+  }, []);
   
   const filteredCars = allCars.filter(car => 
     car.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -31,11 +37,13 @@ const Cars = () => {
             />
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredCars.map(car => (
-              <CarCard key={car.id} car={car} />
-            ))}
-          </div>
+          {isLoaded && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredCars.map(car => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+          )}
           
           {filteredCars.length === 0 && (
             <div className="text-center py-12">
