@@ -1,4 +1,3 @@
-
 import { CarType } from '../types';
 
 export const cars: CarType[] = [
@@ -26,8 +25,8 @@ export const cars: CarType[] = [
     name: 'Countach',
     manufacturer: 'Lamborghini',
     year: 1974,
-    image: 'https://images.unsplash.com/photo-1577495508326-19a1b3cf65b9?q=80&w=2127&auto=format&fit=crop',
-    thumbnail: 'https://images.unsplash.com/photo-1577495508326-19a1b3cf65b9?q=80&w=400&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1632441366992-4e5271e08635?q=80&w=2070&auto=format&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1632441366992-4e5271e08635?q=80&w=400&auto=format&fit=crop',
     description: 'The Lamborghini Countach is a mid-engine, rear-wheel-drive sports car produced by the Italian automobile manufacturer Lamborghini from 1974 to 1990.',
     history: 'The Countach was designed by Marcello Gandini of the Bertone design studio. Its design pioneered and popularized the wedge-shaped, sharply angled look popular in many high-performance sports cars. The Countach was powered by a V12 engine and used a tubular space frame chassis with aluminum and fiberglass body panels. The name "Countach" comes from a Piedmontese exclamation of astonishment.',
     specs: {
@@ -83,8 +82,8 @@ export const cars: CarType[] = [
     name: 'DB5',
     manufacturer: 'Aston Martin',
     year: 1963,
-    image: 'https://images.unsplash.com/photo-1535360392524-0a59cce19959?q=80&w=2070&auto=format&fit=crop',
-    thumbnail: 'https://images.unsplash.com/photo-1535360392524-0a59cce19959?q=80&w=400&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1616422284347-cd40785fdd10?q=80&w=2071&auto=format&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1616422284347-cd40785fdd10?q=80&w=400&auto=format&fit=crop',
     description: 'The Aston Martin DB5 is a British luxury grand tourer that was made by Aston Martin. It gained worldwide recognition through its use in the James Bond films.',
     history: 'The DB5 was designed by Italian coachbuilder Carrozzeria Touring Superleggera and was an evolution of the final series of DB4. The DB5 is most famous for being the first and most recognized cinematic James Bond car, appearing in Goldfinger (1964), Thunderball (1965), and several later films. The car became so iconic that it has been dubbed "the most famous car in the world".',
     specs: {
