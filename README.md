@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
+# Auto Album
 
-## Project info
+A sleek, modern web showcase for car enthusiasts — browse iconic cars, explore detailed car pages with image galleries, and learn about the collection through a polished, responsive interface.
 
-**URL**: https://lovable.dev/projects/b9695b05-d954-4b9f-96a8-1afcb128b403
+## Features
 
-## How can I edit this code?
+- **Car gallery** — browse a curated collection of iconic cars with rich cards
+- **Car detail pages** — dedicated pages per car with images, specs, and history
+- **Responsive design** — mobile-first layout built with Tailwind CSS and shadcn/ui components
+- **Smooth navigation** — client-side routing (react-router-dom) with dedicated routes for Home, Cars, About, and 404
+- **Modern UI kit** — Radix-based components (dialogs, tooltips, carousels, toasts) with animations
 
-There are several ways of editing your application.
+## Tech stack
 
-**Use Lovable**
+- **Frontend:** React 18 + TypeScript, Vite 5
+- **Styling:** Tailwind CSS, shadcn/ui, Radix UI primitives
+- **Routing:** react-router-dom v6
+- **State/data:** TanStack React Query
+- **Extras:** embla carousels, recharts, sonner toasts
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b9695b05-d954-4b9f-96a8-1afcb128b403) and start prompting.
+## Quick start
 
-Changes made via Lovable will be committed automatically to this repo.
+Prerequisites: Node.js 18+ and npm.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone https://github.com/girishlade111/auto-album.git
+cd auto-album
+npm install
+npm run dev        # start dev server at http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build       # outputs to dist/
+npm run preview     # preview the production build
+```
 
-**Use GitHub Codespaces**
+## Project structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+auto-album/
+├── index.html            # entry HTML
+├── public/               # static assets (car images, favicon)
+├── src/
+│   ├── App.tsx           # routes: /, /cars, /car/:id, /about
+│   ├── main.tsx          # React entry
+│   ├── pages/            # Index, Cars, CarDetail, About, NotFound
+│   ├── components/       # Hero, Navbar, Footer, CarCard, CarGallery
+│   └── components/ui/   # shadcn/ui primitives
+├── supabase/             # supabase config (optional backend hookup)
+└── vite.config.ts        # Vite config (base path set for GitHub Pages)
+```
 
-## What technologies are used for this project?
+## Environment variables
 
-This project is built with .
+None required — the app runs fully client-side. An optional Supabase client stub exists under `src/integrations/supabase/` if you want to wire up a backend; add your own project URL and publishable key.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deploy notes
 
-## How can I deploy this project?
+The app is fully static (no server code), so it deploys anywhere static hosting is available. It is deployed on **GitHub Pages**: the production `vite build` output is published to the `gh-pages` branch, with `base: "/auto-album/"` configured in `vite.config.ts` and matching `basename` in the router.
 
-Simply open [Lovable](https://lovable.dev/projects/b9695b05-d954-4b9f-96a8-1afcb128b403) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built by Girish Lade — https://ladestack.in
